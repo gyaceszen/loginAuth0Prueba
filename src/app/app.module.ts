@@ -20,7 +20,9 @@ import { AuthModule } from '@auth0/auth0-angular';
     AppRoutingModule, 
     AuthModule.forRoot({
           domain: 'dev-agtxkfyd.us.auth0.com',
-          clientId: 'dEUVpRtFthLkOZrcSgaKKNkbG82fi4Ce'
+          clientId: 'dEUVpRtFthLkOZrcSgaKKNkbG82fi4Ce',
+          cacheLocation: 'localstorage',
+          useRefreshTokens: true
         }),
   ],
   providers: [],
