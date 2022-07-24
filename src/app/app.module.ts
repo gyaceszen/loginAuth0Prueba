@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
+// Import the module from the SDK
+import { AuthModule } from '@auth0/auth0-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,11 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    AuthModule.forRoot({
+          domain: 'dev-agtxkfyd.us.auth0.com',
+          clientId: 'dEUVpRtFthLkOZrcSgaKKNkbG82fi4Ce'
+        }),
   ],
   providers: [],
   bootstrap: [AppComponent]
